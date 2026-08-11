@@ -1,0 +1,31 @@
+{
+  "name": "edutrack-backend",
+  "version": "1.0.0",
+  "description": "EduTrack backend (Express + PostgreSQL) - EDU-2026-001",
+  "type": "commonjs",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "migrate": "node src/db/migrate.js",
+    "migrate:assessment-topics": "node src/db/addAssessmentTopics.js",
+    "reconcile:schema": "node src/db/reconcile.js",
+    "audit:db": "node src/db/audit.js",
+    "harden:security": "node src/db/harden.js",
+    "smoke": "node scripts/smoke-test.js",
+    "smoke:assessment-topics": "node scripts/assessment-topics-smoke-test.js",
+    "seed:admin": "node scripts/seed-admin.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "csv-parse": "^5.5.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "pg": "^8.12.0",
+    "xlsx": "^0.18.5"
+  }
+}
